@@ -437,4 +437,48 @@ def arena():
                 
 
     return  
-arena()    
+
+
+def menu_principal():
+    opcion = ""
+    while opcion != "6":
+        print("\n" + "=" * 55)
+        print("   TP 1 INTEGRADOR - ESTRUCTURAS REPETITIVAS")
+        print("              Luciano Velásquez")
+        print("=" * 55)
+        print("  1. Ejercicio 1 — Caja del Kiosco")
+        print("  2. Ejercicio 2 — Acceso al Campus y Menú Seguro")
+        print("  3. Ejercicio 3 — Agenda de Turnos")
+        print("  4. Ejercicio 4 — Escape Room: La Bóveda")
+        print("  5. Ejercicio 5 — Escape Room: La Arena del Gladiador")
+        print("  6. Salir")
+        print("=" * 55)
+
+        opcion = input("Seleccione una opción (1-6): ").strip()
+
+        if opcion == "1":
+            print("\n--- EJERCICIO 1: CAJA DEL KIOSCO ---")
+            caja_kiosco()
+        elif opcion == "2":
+            print("\n--- EJERCICIO 2: ACCESO AL CAMPUS Y MENÚ SEGURO ---")
+            acceso_seguro()
+        elif opcion == "3":
+            print("\n--- EJERCICIO 3: AGENDA DE TURNOS ---")
+            agenda_turnos()
+        elif opcion == "4":
+            print("\n--- EJERCICIO 4: ESCAPE ROOM: LA BÓVEDA ---")
+            boveda()
+        elif opcion == "5":
+            print("\n--- EJERCICIO 5: ESCAPE ROOM: LA ARENA DEL GLADIADOR ---")
+            arena()
+        elif opcion == "6":
+            print("\n¡Gracias por utilizar el programa! Saliendo...")
+            break
+        else:
+            print("\n[ERROR] Opción no válida. Por favor, ingrese un número del 1 al 6.")
+
+        input("\nPresione Enter para volver al menú principal...")
+
+
+if __name__ == "__main__":
+    menu_principal()
